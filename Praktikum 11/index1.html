@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta name="author" content="Frangky Hernandez 2172036">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color:darksalmon;
+            font-family: Arial, Helvetica, sans-serif;
+            align-items: center;
+            justify-content: center;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+        #number{
+            background-color: darksalmon;
+            border: none;
+            display: inline-block;
+            text-indent: 50px;
+            font-size: 20px;
+            width: 50px;
+            height: 20px;
+            margin-top: 14px;
+            margin-left: 4px;
+        }
+        .speedrange{
+            background-color:rgba(0,0,0, 0.1);
+            border:none;
+            color: black;
+            width: 130px;
+            height: 50px;
+            display:flex;
+            position: absolute;
+            margin-top: 600px;
+        }
+        #speed{
+            text-indent: 15px;
+            margin-top: 17px;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="teks">Start...</h1>
+    <div class="speedrange">
+    <h3 id="speed">Speed: </h3> 
+    <input type="number" id="number" name="number" min="0" max="10">
+    </div>
+    <script>
+        let index = 1;
+        function tulisTulisan(){
+            let pesan = "We Love Programming";
+            if(index<=pesan.length){
+                let text = pesan.slice(0,index);
+                document.getElementById("teks").innerHTML = text;
+                setTimeout(tulisTulisan,100);
+                index++
+            }
+            else{
+                index = 1;
+                document.getElementById("teks").innerHTML = ""
+                setTimeout(tulisTulisan,100);
+            }
+        }
+        tulisTulisan();
+    </script>
+</body>
+</html>

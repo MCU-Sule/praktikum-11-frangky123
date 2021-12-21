@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta name="author" content="Frangky Hernandez 2172036">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Key Code</title>
+    <style>
+    body{
+        background-color:slategray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 500px;
+        text-align: center;
+        overflow: hidden;
+        
+    }
+    .kode{
+        border: 1px solid black;
+        font-size: 30px;
+        padding: 20px;
+        margin: 20px;
+        flex-direction: column;
+        position: relative;
+        display: inline-flex;
+        background-color: white;
+        min-width: 150px;
+    }
+    .kode small{
+        position: absolute;
+        top: -25px;
+        left: 0;
+        text-align: center;
+        width: 100%;
+        font-size: 15px;
+    }
+
+    </style>
+</head>
+<body>
+    <div id="keycode">
+    
+        <div class = "kode">Press any key to get the keyCode</div>
+        </div>
+        
+    <script>
+       let keycode = document.getElementById("keycode")
+
+       window.addEventListener('keydown', (e) => {
+           keycode.innerHTML = `
+           <div class="kode">
+            ${e.key === '' ? 'Space' : e.key}
+            <small>event.key</small></div>
+        <div class="kode">
+            ${e.keyCode}
+            <small>event.keyCode</small></div>
+        <div class="kode">
+            ${e.code}
+            <small>event.code</small></div>
+            `;
+       })
+        
+    </script>
+</body>
+</html>

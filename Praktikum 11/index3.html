@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta name="author" content="Frangky Hernandez 2172036">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid-container{
+            display:inline-grid ;
+            grid-template-columns: auto auto;
+            padding: 0px;
+            margin-left: 40%;
+        }
+        .grid-item{
+            background-color: #E0FFFF;
+            border: 1px solid black;
+            padding: 60px ;
+            margin: 0.5px;
+        }
+        * ul{
+            list-style: none;
+            display:flex;
+            margin-left: 12%;
+            
+        }
+        li{
+            width: 200px;
+            height: 100px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        #resetgame{
+            height: 40px;
+            background-color:coral;
+            margin-top: 100px;
+            margin-left: 525px;
+        }
+        #nama{
+            border: 1px solid black;
+            text-align: center;
+            background-color:deepskyblue;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+    </div>
+    <ul>
+        <li><img src="3.jpg"></li>
+        <li><img src="1.jpg"></li>
+        <li><img src="4.jpg"></li>
+        <li><img src="2.jpg"></li>
+    </ul>
+    <button type="reset" id="resetgame"><b>Restart Game</button></b>
+    <div id="nama"><b>Create By Frangky Hernandez ( 2172036 ) &copy;2021</div></b>
+</body>
+</html>
